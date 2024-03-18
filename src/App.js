@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Navigation from './Layout/Header/Navigation';
+import LoginForm from './loginForm';
+import 'bootstrap/dist/css/bootstrap.min.css';
+// importing components and styling
 
 function App() {
   return (
+     // A div with a class of "App" to style the whole app
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <div className="form-container">
+        <LoginForm />
+      </div>
     </div>
   );
 }
 
 export default App;
+// Exporting the App component
